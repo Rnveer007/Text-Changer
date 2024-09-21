@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="text.changer.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <div class="heading">
+                <h1>Text Changer</h1>
+            </div>
+            <!-- <form action=""> -->
+            <div> <input type="text" placeholder="Write Here" id="inputvila"></div>
+            <button onclick="italic()" id="italic">Italic</button>
+            <button onclick="normal()" id="normal">Normal</button>
+            <button onclick="bold()" id="bold">Bold</button>
+            <button onclick="uppercase()" id="uppercase">UPPERCASE</button>
+            <button onclick="lowercase()" id="lowercase">lowercase</button>
+            <button onclick="capital()" id="capital">Capital</button>
+            <!-- </form> -->
+            <button onclick="add()">Add</button>
+        </div>
+        <div class="newValues">     </div>
+     
+
+    </div>
+
+
+
+
+
+    <script>
+        let target = document.getElementById("inputvila")
+        // let btn1=document.getElementById("italic")
+        // let btn2=document.getElementById("bold")
+        // let btn3=document.getElementById("uppercase")
+        // let btn4=document.getElementById("lowercase")
+
+
+
+        function italic() {
+            target.style.fontStyle = "Italic"
+        }
+
+        function bold() {
+            target.style.fontWeight = "bold"
+        }
+        function uppercase() {
+            target.style.textTransform = "uppercase"
+        }
+
+        function lowercase() {
+            target.style.textTransform = "lowercase"
+        }
+        function capital() {
+            target.style.textTransform = "capitalize"
+        }
+        function normal() {
+            target.style.fontStyle = "normal"
+        }
+
+
+        function add() {
+            let addValue = document.createElement("h1")
+            addValue.innerHTML = target.value
+
+            let btn1 = document.createElement("button")
+            btn1.innerHTML = "Edit"
+
+            let btn2 = document.createElement("button")
+            btn2.innerHTML = "delete"
+
+        }
+
+    </script>
+</body>
+
+</html>
